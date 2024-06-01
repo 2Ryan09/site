@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-24">
       <h1>Scratch that.. on to web dev!</h1>
       <p>Moving to NEXT.js and Vercel.</p>
         <br/>
