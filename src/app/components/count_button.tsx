@@ -10,7 +10,7 @@ export default function CountButton() {
         console.log(`I just updated the count to ${count}`)
     }
 
-    return <button onClick={handleCount}>
+    return <button onClick={handleCount} className="rounded outline outline-offset-2 outline-blue-500">
         <p>Add!</p>
         <p>Count is now: {count}</p>
     </button>
