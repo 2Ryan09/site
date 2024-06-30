@@ -1,4 +1,4 @@
-import CountButton from "./components/count_button";
+import Counter from "./components/counter";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       </div>
       <hr />
       <div>
-        <CountButton />
+        <Counter />
       </div>
     </main>
   );
