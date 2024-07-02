@@ -7,7 +7,7 @@ function randomColor(){
     return "hsl(" + (Math.random() * 360 % 360) + ", 100%, 50%)";
 }
 
-function ChaserBox({ x , y }) {
+function ChaserBox({ x , y }: {x:number, y:number}) {
     let [box_color, setBoxColor] = useState(0);
 
     const color_option = ["black", "blue"];
