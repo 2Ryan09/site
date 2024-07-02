@@ -27,10 +27,10 @@ const useMousePosition = () => {
     const [
       mousePosition,
       setMousePosition
-    ] = useState({ x: null, y: null });
+    ] = useState({ x: 0, y: 0 });
   
     useEffect(() => {
-      const updateMousePosition = ev => {
+      const updateMousePosition = (ev: { clientX: number; clientY: number; }) => {
         setMousePosition({ x: ev.clientX, y: ev.clientY });
       };
       
@@ -41,7 +41,7 @@ const useMousePosition = () => {
       };
     }, []);
   
-    return mousePosition;
+    return mousePosition;x
   };
 
 
