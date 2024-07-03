@@ -8,7 +8,7 @@ function randomColor(){
 }
 
 function ChaserBox({ x , y }: {x:number, y:number}) {
-    let [box_color, setBoxColor] = useState(0);
+    let [box_color, setBoxColor] = useState("black");
 
     const color_option = ["black", "blue"];
 
@@ -18,8 +18,15 @@ function ChaserBox({ x , y }: {x:number, y:number}) {
     x = x - (width / 2);
     y = y - (height / 2);
 
+    useEffect(() => {
+        const id = setInterval(() => {
+            setBoxColor(randomColor())
+        }, 300);
+        return () => clearInterval(id);
+    }, [])
+
     return (
-        <div style={{left: x, top: y, position: 'absolute', backgroundColor: "blue", width: width, height: height}}></div>
+        <div style={{left: x, top: y, position: 'absolute', backgroundColor: box_color, width: width, height: height}}></div>
     );
 }
 
@@ -41,12 +48,24 @@ const useMousePosition = () => {
       };
     }, []);
   
-    return mousePosition;x
+    return mousePosition;
   };
 
 
 export default function FlashyColors() {
     const mousePosition = useMousePosition();
+
+    const [chaser_position, setChaserPosition] = useState({"x": 0, "y": 0})
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            setChaserPosition({"x": mousePosition.x, "y": mousePosition.y})
+        }, 300);
+
+        console.log(`Setting chaser position to ${chaser_position}`)
+        return () => clearInterval(id);
+    }, [])
+
 
     return (
         <main>
