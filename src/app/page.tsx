@@ -1,10 +1,9 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
 import Image from "next/image";
-
-import PlaygroundLink from "@/components/links";
 
 export default function Home() {
   return (
@@ -29,7 +28,9 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <PlaygroundLink />
+            <Link href="/playground/chaser" color="secondary">
+              Playground
+            </Link>
             <br />
             <p>- RAW</p>
           </Box>
