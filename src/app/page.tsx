@@ -18,8 +18,9 @@ export default function Home() {
           alt="Photo of Ryan Waldheim"
           width={300}
           height={300}
+          priority
         />
-        <h1 className={orbitron.className} style={{fontSize: '3rem', fontWeight: 600}}>Ryan Allyn Waldheim</h1>
+        <h1 className={orbitron.className + " text-center"} style={{fontSize: '3rem', fontWeight: 600}}>Ryan Allyn Waldheim</h1>
       </div>
       <div className="flex flex-col justify-center text-center p-2">
         <p>Battery engineer transitioning into web development with a passion for making aesthetic designs performant and accessible.</p>
