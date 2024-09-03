@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className={orbitron.className} style={{fontSize: '3rem', fontWeight: 600}}>Ryan Allyn Waldheim</h1>
       </div>
       <div className="flex flex-col justify-center text-center p-2">
-        <p>Battery engineer transitioning into web development with a passion for design and accessibility.</p>
+        <p>Battery engineer transitioning into web development with a passion for making aesthetic designs performant and accessible.</p>
       </div>
       <div className="flex space-x-4 p-2">
         <Link href="mailto:ryan@waldhe.im">
