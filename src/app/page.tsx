@@ -13,7 +13,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-24">
       <div className="flex flex-col justify-center items-center p-2">
         <Image
-          className="rounded-full"
+          className="rounded-full shadow"
           src="https://avatars.githubusercontent.com/u/22386684?v=4"
           alt="Photo of Ryan Waldheim"
           width={300}
